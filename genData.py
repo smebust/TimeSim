@@ -27,18 +27,20 @@ if __name__ == "__main__":
     thisEvent = []
     for i in allDatClean:
         if(i[0] == 'event'):
-            print()
-            print()
-            print()
-            print()
+            
             print("Hello")
             #print(i)
             
-            print(thisEvent)
-            events.update( {ev : thisEvent} )
+            #print(thisEvent)
+            events[str(ev)] = thisEvent
             ev += 1
             thisEvent.clear()
 
         thisEvent.append(i)
 
-    print(events)
+    for k,v in events.items():
+        print(k,v)
+        print()
+        print()
+        print()
+        print()
